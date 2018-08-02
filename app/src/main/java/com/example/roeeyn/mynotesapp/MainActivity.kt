@@ -13,7 +13,7 @@ import kotlinx.android.synthetic.main.content_main.*
 
 class MainActivity : AppCompatActivity() {
 
-    override fun onCreate(savedInstanceState: Bundle?) {
+    override fun onCreate(savedInstanceState: Bundle) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
         btn_login.setOnClickListener {
 
             val usuario = et_user.text.toString()
-            val pswd = et_pswd.text.toString()
+            val pswd = et_password.text.toString()
 
             if(usuario == "admin" && pswd == "root") goToNotesActivity()
             else tostado("No es correcto")
